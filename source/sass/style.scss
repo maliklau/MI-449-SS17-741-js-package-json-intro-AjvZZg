@@ -1,0 +1,79 @@
+$border: 1px solid #555;
+$transProp: width 0.5s, background-color 0.5s;
+$clicksStuff: pointer;
+$alignIt: center;
+
+body {
+  margin: 0;
+  background-color: #333;
+  color: #fff;
+}
+
+table.menu {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-top: 0;
+  border-left: 0;
+  border-right: $border;
+  border-bottom: $border;
+  border-bottom-right-radius: 6px;
+  background-color: #777;
+  box-shadow: #000 0 0 15px;
+  font-family: 'Courier New', Courier, monospace;
+
+  h1 {
+    margin: 0 10px;
+    font-size: 20px;
+  }
+
+  td {
+    text-align: $alignIt;
+
+    &.label {
+      text-align: right;
+      width: 80px;
+    }
+
+    &.result {
+      text-align: right;
+    }
+  }
+
+  button {
+    width: 80%;
+    background-color: #ccf;
+    color: #111;
+    text-align: $alignIt;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: normal;
+    font-size: 12px;
+    border: 1px solid #555;
+    transition: $transProp;
+    border-radius: 3px;
+
+    &:active,
+    &:focus {
+      outline: none;
+    }
+
+    &:hover {
+      cursor: $clicksStuff;
+      background-color: #ddf;
+      width: 85%;
+      transition: $transProp;
+    }
+  }
+}
+
+.clicky {
+  position: absolute;
+  border-radius: 50%;
+  background-color: #aaf;
+  border: $border;
+  box-shadow: #000 0 0 15px;
+}
+
+.clicky:hover {
+  cursor: $clicksStuff;
+}
